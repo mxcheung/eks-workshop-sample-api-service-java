@@ -46,6 +46,9 @@ cheungm:~/environment $ kubectl get services hello-k8s -o wide
 NAME        TYPE           CLUSTER-IP       EXTERNAL-IP                                                                   PORT(S)        AGE    SELECTOR
 hello-k8s   LoadBalancer   10.100.195.226   a6499a8ff900e4f03897a8717b9aa145-387724040.ap-southeast-2.elb.amazonaws.com   80:31973/TCP   4m7s   app=hello-k8s
 ```
+Use external ip to access swagger
+
+http://a6499a8ff900e4f03897a8717b9aa145-387724040.ap-southeast-2.elb.amazonaws.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
 # Links
 
