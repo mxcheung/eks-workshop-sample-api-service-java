@@ -34,6 +34,12 @@ Stuck here are GO Dockerfile multi-stage
 The Dockerfile is a multi-stage build that compiles the Go application and then packages it in a minimal image that pulls from scratch. The size of this Docker image is ~ 3.2 MiB.
 ```
 
+# Confirm the change
+
+```
+If you still have the ELB URL open in your browser, refresh to confirm the update. 
+If you need to retrieve the URL again, use kubectl get services hello-k8s -o wide
+```
 
 # Links
 
