@@ -7,3 +7,8 @@ eks-workshop-sample-api-service-java
 1.  Build Docker image and test
 
 2. Install code pipeline via cloud formation
+
+
+# Links
+
+https://www.eksworkshop.com/intermediate/220_codepipeline/codepipeline/
