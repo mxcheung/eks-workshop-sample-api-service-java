@@ -2,6 +2,10 @@
 eks-workshop-sample-api-service-java
 
 
+![Lab Diagram](https://github.com/mxcheung/eks-workshop-sample-api-service-java/blob/main/eks.png)
+
+
+
 # Step by Step
 
 1.  Build Docker image and test
