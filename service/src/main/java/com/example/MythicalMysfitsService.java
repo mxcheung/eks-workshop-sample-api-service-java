@@ -23,7 +23,7 @@ public class MythicalMysfitsService {
         
         Mysfit mysfit = new Mysfit();
         mysfit.setMysfitId(mysfitId);
-        mysfit.setName("Rygard 1.53");
+        mysfit.setName("Rygard 1.54");
         return mysfit;
     }
 
