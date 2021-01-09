@@ -56,3 +56,5 @@ https://www.eksworkshop.com/intermediate/220_codepipeline/codepipeline/
 
 
 http://aed0766c778694ddf9d4b38922522c5a-1492262707.ap-southeast-2.elb.amazonaws.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+
+https://dzone.com/articles/multi-stage-docker-image-build-for-java-apps
