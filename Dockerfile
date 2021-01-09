@@ -1,6 +1,11 @@
-FROM java:8
-VOLUME /tmp
-ADD service/target/mythical-mysfits-1.0-SNAPSHOT.jar app.jar
+FROM maven:3.6.1-amazoncorretto-8 as BUILD
+
+COPY ./service /usr/src/app
+RUN mvn -Dmaven.repo.local=/root/m2 --batch-mode -f /usr/src/app/pom.xml clean package
+
+FROM openjdk:8-jre-slim
 EXPOSE 8080
-RUN bash -c 'touch /app.jar'
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+COPY --from=BUILD /usr/src/app/target/mythical-mysfits-1.0-SNAPSHOT.jar /opt/target/app.jar
+WORKDIR /opt/target
+
+CMD ["java", "-jar", "app.jar"]
