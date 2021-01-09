@@ -61,3 +61,6 @@ http://aed0766c778694ddf9d4b38922522c5a-1492262707.ap-southeast-2.elb.amazonaws.
 https://dzone.com/articles/multi-stage-docker-image-build-for-java-apps
 
 https://mailslurp.medium.com/faster-java-containers-with-docker-multi-stage-builds-cc63e056e546
+
+https://mythicalmysfits.com/
+
