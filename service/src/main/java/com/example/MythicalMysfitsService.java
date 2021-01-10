@@ -42,12 +42,10 @@ public class MythicalMysfitsService {
     }
 
     public void likeMysfit(String mysfitId) {
-
-        Mysfit mysfitToUpdate = new Mysfit();
-        mysfitToUpdate.setMysfitId(mysfitId);
-        mysfitToUpdate.setName("Rygard");               
+        Mysfit mysfitToUpdate = mapper.load(Mysfit.class, mysfitId);
         Integer likes = mysfitToUpdate.getLikes() + 1;
-        mysfitToUpdate.setLikes(likes);    
+        mysfitToUpdate.setLikes(likes);
+        mapper.save(mysfitToUpdate);
     }
 
     public void adoptMysfit(String mysfitId) {
