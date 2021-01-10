@@ -79,3 +79,6 @@ https://mythicalmysfits.com/
 
 https://cmani.medium.com/pod-level-access-to-dynamodb-using-iam-on-amazon-eks-eeabd5460cb6
 
+http://cheungm-eksworkshop-2021-01-10.s3-ap-southeast-2.amazonaws.com/index.html
+
+http://abb0a79a69752428aad6bc6d8364cda2-1022846971.ap-southeast-2.elb.amazonaws.com/swagger-ui/index.html
