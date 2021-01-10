@@ -38,7 +38,8 @@ public class MythicalMysfitsService {
         mysfit.setAge(2000000000);
         mysfit.setGoodevil("Good");
         mysfit.setDescription("Hasla's presence warms every room. For the last 2 billion years, she's made visitors from far-away lands and the galaxy next door feel immediately at ease. Usually it's because of her big heart, but sometimes it's because of the fire she breathes—especially after eating garlic and starlight. Hasla loves togetherness, board games, and asking philosophical questions that leave people pondering the meaning of life as they fall asleep at night.");
-        return mysfit;
+        
+        return mapper.load(Mysfit.class, mysfitId);
     }
 
     public void likeMysfit(String mysfitId) {
