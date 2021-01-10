@@ -3,16 +3,25 @@ package com.example;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.amazonaws.services.dynamodbv2.model.GetItemRequest;
+import com.amazonaws.services.dynamodbv2.model.GetItemResult;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MythicalMysfitsService {
 
-
+    private final AmazonDynamoDB client = AmazonDynamoDBClientBuilder.defaultClient();
+    private DynamoDBMapper mapper = new DynamoDBMapper(client);
+    
     public Mysfits getAllMysfits() {
 
-        List<Mysfit> mysfits = new ArrayList<>();
-        mysfits.add(getMysfit("1L"));
+        List<Mysfit> mysfits = mapper.scan(Mysfit.class, new DynamoDBScanExpression());
         Mysfits allMysfits = new Mysfits(mysfits);
 
         return allMysfits;
@@ -23,7 +32,7 @@ public class MythicalMysfitsService {
         
         Mysfit mysfit = new Mysfit();
         mysfit.setMysfitId(mysfitId);
-        mysfit.setName("Hasla 1.4.003");
+        mysfit.setName("Hasla 1.4.004");
         mysfit.setSpecies("Haetae");
         mysfit.setLawchaos("Neutral");
         mysfit.setAge(2000000000);
