@@ -1,5 +1,10 @@
 package com.example;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+
+@DynamoDBTable(tableName="MysfitsTable")
 public class Mysfit {
 
     private String mysfitId;
@@ -11,12 +16,11 @@ public class Mysfit {
     private String lawchaos;
     private String thumbImageUri;
     private String profileImageUri;
-    private Integer likes;
-    private Boolean adopted;
 
     public Mysfit() {
     }
 
+    @DynamoDBHashKey(attributeName="MysfitId")
     public String getMysfitId() {
         return mysfitId;
     }
@@ -25,6 +29,7 @@ public class Mysfit {
         this.mysfitId = mysfitId;
     }
 
+    @DynamoDBAttribute(attributeName="Name")
     public String getName() {
         return name;
     }
@@ -33,6 +38,7 @@ public class Mysfit {
         this.name = name;
     }
 
+    @DynamoDBAttribute(attributeName="Species")
     public String getSpecies() {
         return species;
     }
@@ -41,6 +47,7 @@ public class Mysfit {
         this.species = species;
     }
 
+    @DynamoDBAttribute(attributeName="Age")
     public Integer getAge() {
         return age;
     }
@@ -49,6 +56,7 @@ public class Mysfit {
         this.age = age;
     }
 
+    @DynamoDBAttribute(attributeName="Description")
     public String getDescription() {
         return description;
     }
@@ -57,6 +65,7 @@ public class Mysfit {
         this.description = description;
     }
 
+    @DynamoDBAttribute(attributeName="GoodEvil")
     public String getGoodevil() {
         return goodevil;
     }
@@ -65,6 +74,7 @@ public class Mysfit {
         this.goodevil = goodevil;
     }
 
+    @DynamoDBAttribute(attributeName="LawChaos")
     public String getLawchaos() {
         return lawchaos;
     }
@@ -73,6 +83,7 @@ public class Mysfit {
         this.lawchaos = lawchaos;
     }
 
+    @DynamoDBAttribute(attributeName="ThumbImageUri")
     public String getThumbImageUri() {
         return thumbImageUri;
     }
@@ -81,6 +92,7 @@ public class Mysfit {
         this.thumbImageUri = thumbImageUri;
     }
 
+    @DynamoDBAttribute(attributeName="ProfileImageUri")
     public String getProfileImageUri() {
         return profileImageUri;
     }
@@ -88,22 +100,4 @@ public class Mysfit {
     public void setProfileImageUri(String profileImageUri) {
         this.profileImageUri = profileImageUri;
     }
-
-    public Integer getLikes() {
-        return likes;
-    }
-
-    public void setLikes(Integer likes) {
-        this.likes = likes;
-    }
-
-    public Boolean getAdopted() {
-        return adopted;
-    }
-
-    public void setAdopted(Boolean adopted) {
-        this.adopted = adopted;
-    }
-
-    
 }
