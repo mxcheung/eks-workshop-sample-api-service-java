@@ -55,8 +55,19 @@ public class MythicalMysfitsService {
     }
 
     public Mysfits queryMysfits(String filter, String value) {
-        Mysfits allMysfits = getAllMysfits();
-        return allMysfits;
+        HashMap<String, AttributeValue> attribValue = new HashMap<String, AttributeValue>();
+        attribValue.put(":"+value,  new AttributeValue().withS(value));
+
+        DynamoDBQueryExpression<Mysfit> queryExpression = new DynamoDBQueryExpression<Mysfit>()
+                .withIndexName(filter+"Index")
+                .withKeyConditionExpression(filter + "= :" + value)
+                .withExpressionAttributeValues(attribValue)
+                .withConsistentRead(false);
+
+        List<Mysfit> mysfits = mapper.query(Mysfit.class, queryExpression);
+        Mysfits allMysfits = new Mysfits(mysfits);
+
+        return allMysfits;        
     }
 
 }
