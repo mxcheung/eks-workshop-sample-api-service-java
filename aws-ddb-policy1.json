@@ -5,7 +5,10 @@
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": "dynamodb:*",
-            "Resource": "arn:aws:dynamodb:ap-southeast-2:xxxxxxx:table/MysfitsTable"
+            "Resource": [
+                "arn:aws:dynamodb:ap-southeast-2:918300033687:table/MysfitsTable",
+                "arn:aws:dynamodb:ap-southeast-2:918300033687:table/MysfitsTable/index/*"
+            ]
         }
     ]
 }
