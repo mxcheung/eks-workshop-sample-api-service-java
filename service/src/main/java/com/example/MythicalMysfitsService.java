@@ -23,7 +23,7 @@ public class MythicalMysfitsService {
         
         Mysfit mysfit = new Mysfit();
         mysfit.setMysfitId(mysfitId);
-        mysfit.setName("Hasla 1.4.002");
+        mysfit.setName("Hasla 1.4.003");
         mysfit.setSpecies("Haetae");
         mysfit.setLawchaos("Neutral");
         mysfit.setAge(2000000000);
