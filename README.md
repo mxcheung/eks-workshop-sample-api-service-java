@@ -51,6 +51,19 @@ Use external ip to access swagger
 
 http://a6499a8ff900e4f03897a8717b9aa145-387724040.ap-southeast-2.elb.amazonaws.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
+
+# Dynamodb
+
+```
+{
+  "timestamp": "2021-01-10T09:43:50.821+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "User: arn:aws:sts::918300033687:assumed-role/eksctl-eksworkshop-eksctl-nodegro-NodeInstanceRole-1CKGIFBC410Q0/i-0fdc024a3b4c1e8b7 is not authorized to perform: dynamodb:Scan on resource: arn:aws:dynamodb:ap-southeast-2:918300033687:table/MysfitsTable (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: AccessDeniedException; Request ID: A5BSOI9FLV6537SVT29HC3PBC3VV4KQNSO5AEMVJF66Q9ASUAAJG)",
+  "path": "/mysfits"
+}
+```
+
 # Links
 
 https://www.eksworkshop.com/intermediate/220_codepipeline/codepipeline/
