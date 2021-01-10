@@ -64,3 +64,5 @@ https://mailslurp.medium.com/faster-java-containers-with-docker-multi-stage-buil
 
 https://mythicalmysfits.com/
 
+https://cmani.medium.com/pod-level-access-to-dynamodb-using-iam-on-amazon-eks-eeabd5460cb6
+
