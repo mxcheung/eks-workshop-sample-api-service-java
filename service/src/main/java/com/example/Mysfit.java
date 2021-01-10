@@ -16,6 +16,8 @@ public class Mysfit {
     private String lawchaos;
     private String thumbImageUri;
     private String profileImageUri;
+    private Integer likes;
+    private Boolean adopted;
 
     public Mysfit() {
     }
@@ -99,5 +101,23 @@ public class Mysfit {
 
     public void setProfileImageUri(String profileImageUri) {
         this.profileImageUri = profileImageUri;
+    }
+
+    @DynamoDBAttribute(attributeName="Likes")
+    public Integer getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Integer likes) {
+        this.likes = likes;
+    }
+
+    @DynamoDBAttribute(attributeName="adopted")
+    public Boolean getAdopted() {
+        return adopted;
+    }
+
+    public void setAdopted(Boolean adopted) {
+        this.adopted = adopted;
     }
 }
