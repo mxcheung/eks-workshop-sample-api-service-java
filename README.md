@@ -59,7 +59,7 @@ http://a6499a8ff900e4f03897a8717b9aa145-387724040.ap-southeast-2.elb.amazonaws.c
   "timestamp": "2021-01-10T09:43:50.821+0000",
   "status": 500,
   "error": "Internal Server Error",
-  "message": "User: arn:aws:sts::918300033687:assumed-role/eksctl-eksworkshop-eksctl-nodegro-NodeInstanceRole-1CKGIFBC410Q0/i-0fdc024a3b4c1e8b7 is not authorized to perform: dynamodb:Scan on resource: arn:aws:dynamodb:ap-southeast-2:918300033687:table/MysfitsTable (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: AccessDeniedException; Request ID: A5BSOI9FLV6537SVT29HC3PBC3VV4KQNSO5AEMVJF66Q9ASUAAJG)",
+  "message": "User: arn:aws:sts::<ACCOUNT_ID>:assumed-role/eksctl-eksworkshop-eksctl-nodegro-NodeInstanceRole-1CKGIFBC410Q0/i-0fdc024a3b4c1e8b7 is not authorized to perform: dynamodb:Scan on resource: arn:aws:dynamodb:ap-southeast-2:<ACCOUNT_ID>:table/MysfitsTable (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: AccessDeniedException; Request ID: A5BSOI9FLV6537SVT29HC3PBC3VV4KQNSO5AEMVJF66Q9ASUAAJG)",
   "path": "/mysfits"
 }
 ```
@@ -74,7 +74,7 @@ managedNodeGroups:
       - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
       - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
       - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
-      - arn:aws:iam::918300033687:policy/aws-ddb-policy1
+      - arn:aws:iam::<ACCOUNT_ID>:policy/aws-ddb-policy1
 ```
         
 # Links
