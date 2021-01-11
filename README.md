@@ -64,6 +64,19 @@ http://a6499a8ff900e4f03897a8717b9aa145-387724040.ap-southeast-2.elb.amazonaws.c
 }
 ```
 
+### Attaching policies by ARN
+
+```
+managedNodeGroups:
+- name: nodegroup
+    iam:
+      attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+        - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
+        - arn:aws:iam::918300033687:policy/aws-ddb-policy1
+```
+        
 # Links
 
 https://www.eksworkshop.com/intermediate/220_codepipeline/codepipeline/
@@ -80,5 +93,8 @@ https://mythicalmysfits.com/
 https://cmani.medium.com/pod-level-access-to-dynamodb-using-iam-on-amazon-eks-eeabd5460cb6
 
 http://cheungm-eksworkshop-2021-01-10.s3-ap-southeast-2.amazonaws.com/index.html
+
+https://eksctl.io/usage/iam-policies/
+
 
 http://abb0a79a69752428aad6bc6d8364cda2-1022846971.ap-southeast-2.elb.amazonaws.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
