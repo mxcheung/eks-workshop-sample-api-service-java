@@ -1,0 +1,28 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eksworkshop-eksctl
+  region: ap-southeast-2
+  version: "1.17"
+
+availabilityZones: ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
+
+managedNodeGroups:
+- name: nodegroup
+    iam:
+      attachPolicyARNs:
+        - arn:aws:iam::REPLACE_ACCOUNT_ID:policy/aws-ddb-policy1
+  desiredCapacity: 3
+  ssh:
+    allow: true
+    publicKeyName: eksworkshop
+
+# To enable all of the control plane logs, uncomment below:
+# cloudWatch:
+#  clusterLogging:
+#    enableTypes: ["*"]
+
+secretsEncryption:
+  keyARN: arn:aws:kms:ap-southeast-2:REPLACE_ACCOUNT_ID:key/ae8c41b7-24f0-4664-acc3-c94d0a7d7c91
