@@ -37,7 +37,7 @@ public class MythicalMysfitsController {
 
     @RequestMapping(value="/", method=RequestMethod.GET)
     public String healthCheckResponse() {
-        return "Nothing here, used for health check. Try /mysfits instead.";
+        return "Nothing here, used for health check. Try alternate /mysfits instead.";
     }
 
     @RequestMapping(value="/mysfits/{mysfitId}", method=RequestMethod.GET)
