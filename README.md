@@ -11,9 +11,9 @@ eks-workshop-sample-api-service-java
 cd ..
 docker build . -t 918300033687.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
 
-docker run -p 8081:8080 918300033687.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
+docker run -p 8081:8080 <ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
 
-docker push 918300033687.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
+docker push <ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
 
 aws ecr create-repository --repository-name mythicalmysfits/service
 ```
@@ -23,7 +23,7 @@ Replace CONTAINER_IMAGE
 
 ```
           image: CONTAINER_IMAGE
-          image: 918300033687.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
+          image: <ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
 ```
 
 kubectl apply -f hello-k8s.yml
@@ -74,7 +74,7 @@ managedNodeGroups:
         - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
         - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
         - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
-        - arn:aws:iam::918300033687:policy/aws-ddb-policy1
+        - arn:aws:iam::<ACCOUNT_ID>:policy/aws-ddb-policy1
 ```
         
 # Links
