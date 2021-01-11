@@ -9,7 +9,7 @@ eks-workshop-sample-api-service-java
 
 ```
 cd ..
-docker build . -t 918300033687.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
+docker build . -t <ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
 
 docker run -p 8081:8080 <ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com/mythicalmysfits/service:latest
 
