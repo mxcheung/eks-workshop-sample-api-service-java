@@ -99,3 +99,5 @@ http://cheungm-eksworkshop-2021-01-10.s3-ap-southeast-2.amazonaws.com/index.html
 https://eksctl.io/usage/iam-policies/
 
 http://abb0a79a69752428aad6bc6d8364cda2-1022846971.ap-southeast-2.elb.amazonaws.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+
+https://medium.com/bb-tutorials-and-thoughts/aws-deploying-angular-app-with-nodejs-backend-on-eks-fd972cf0ecef
