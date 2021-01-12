@@ -11,9 +11,13 @@ availabilityZones: ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
 
 managedNodeGroups:
 - name: nodegroup
-    iam:
-      attachPolicyARNs:
-        - arn:aws:iam::REPLACE_ACCOUNT_ID:policy/aws-ddb-policy1
+  iam:
+    attachPolicyARNs:
+      - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+      - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+      - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+      - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
+      - arn:aws:iam::REPLACE_ACCOUNT_ID:policy/aws-ddb-policy1
   desiredCapacity: 3
   ssh:
     allow: true
